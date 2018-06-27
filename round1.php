@@ -6,7 +6,7 @@ if (!isset($_SESSION["ans"])) {
 <html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="bootstrap.min.css" rel="stylesheet" />
+<link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
 
 <head>
     <style>
@@ -960,9 +960,9 @@ int main()
                                             <hr/>
 
                                             <button type="submit" id="button1" name="submit" class="btn btn-primary btn-lg" value="next" style="align:center; position:absolute; left:47%;"
-                                                onclick=my()>SUBMIT</button>
+                                                onclick=timer()>SUBMIT</button>
                                             <script>
-                                                function my() {
+                                                function timer() {
                                                     var startTim = document.getElementById('timer').innerHTML;
                                                     var piece = startTim.split(":");
                                                     var minutes = piece[1];
