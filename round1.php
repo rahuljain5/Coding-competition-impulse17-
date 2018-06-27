@@ -1,10 +1,9 @@
 <?php
 session_start();
-$_SESSION['uname']=$_POST['name'];
+$_SESSION['uname']=$_POST["name"];
 if(!isset($_SESSION["ans"]))
 {
 ?>
-
 <html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,7 +20,6 @@ left:10%;
 position:absolute;
 left:60%;
 }
-
 </style>
 </head>
 <body >
@@ -59,7 +57,8 @@ count();
     <div class="modal-dialog-lg" >
       <div class="modal-content " id="modal-content1" >
 <form id="forml" class="form-horizontal" method="post" action="result.php" >
-	<div id="q1">
+<input name="stamp" id="stam" type="text" style=" display:none;"></input>
+  <div id="q1">
          <div class="modal-header" >
             <h3 ><span class="label label-info" id="qid1">1</span>What is the output of code given below?
 <pre>
@@ -104,26 +103,26 @@ count();
 <br/><hr/>
 <h3 ><span class="label label-info" id="qid4">4</span>Consider the following try ...catch block<pre>
 class TryCatch
-	{
-	public static void main(String args[])
-	{
-	test();
-	}
-	  public static void test()
-	   {
-	     try
+  {
+  public static void main(String args[])
+  {
+  test();
+  }
+    public static void test()
+     {
+       try
                {
-	  	double x=0.0;
-		throw(new Exception("Thrown"));
-		}
-	     catch(Exception e)
-		{
-	         System.out.print("Exception caught ");
-		  return ;
- 		}
-	      finally
+      double x=0.0;
+    throw(new Exception("Thrown"));
+    }
+       catch(Exception e)
+    {
+           System.out.print("Exception caught ");
+      return ;
+    }
+        finally
                 {
-  		System.out.println("finally");
+      System.out.println("finally");
                  }
             }
         }
@@ -461,7 +460,7 @@ int main()
            <h4><label class="element-animation4 right"><input type="radio" name="q30_answer" value="d">Error</label></h4>
 </fieldset>
 <br/><hr/>
-<input name="stamp" id="stam" type="text" style=" display:none;"></input>
+
 <button type="submit" id="button1" name="submit" class="btn btn-primary btn-lg" value="next" style="align:center; position:absolute; left:47%;"   onclick=my()>SUBMIT</button> 
 <script>
 function my(){
@@ -485,10 +484,11 @@ document.getElementById('stam').value=t;
   </div>
 </div>
 </div>
-<?php }
+<?php 
+}
 else
 {
-
-echo "<h1> No Retry allowed</h1>";
+echo("No Retry allowed!");
+print_r($_POST);
 }
 ?>

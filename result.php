@@ -1,6 +1,7 @@
 <?php
+ ini_set('display_errors', '1'); 
 session_start();
-$connect=mysqli_connect('localhost','phpmyadmin','dQbgr0ReEzQI','phpmyadmin');
+$connect=mysqli_connect('localhost','root','','tsc');
 if(!$connect)
 {
 echo "failed";
