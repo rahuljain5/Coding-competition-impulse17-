@@ -41,7 +41,7 @@ if (!isset($_SESSION["ans"])) {
         <div class="modal-dialog-lg">
             <div class="modal-content " id="modal-content1">
                 <form id="forml" class="form-horizontal" method="post" action="result.php">
-                    <input name="stamp" id="stam" type="text" style=" display:none;"></input>
+                    <input name="timetaken" id="stam" type="text" style=" display:none;"></input>
                     <div class="modal-header">
                         <script>
                             var i = 0;
@@ -87,7 +87,6 @@ if (!isset($_SESSION["ans"])) {
                 </form>
                 </div>
             </div>
-            <br/>
         </div>
     </div>
     </div>
