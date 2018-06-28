@@ -57,21 +57,21 @@ if (!isset($_SESSION["ans"])) {
 <fieldset id="field">
 <h4>
 <label class="element-animation1 left">
-<input type="radio" name="${quest}+_answer" value="a">${questjson.optionA}</label>
+<input type="radio" name="${quest}_answer" value="a">${questjson.optionA}</label>
 </h4>
 <h4>
 <label class="element-animation2 right">
-<input type="radio" name="${quest}+_answer" value="b">${questjson.optionB}</label>
+<input type="radio" name="${quest}_answer" value="b">${questjson.optionB}</label>
 <br/>
 <br/>
 </h4>
 <h4>
 <label class="element-animation3 left ">
-<input type="radio" name="${quest}+_answer" value="c">${questjson.optionC}</label>
+<input type="radio" name="${quest}_answer" value="c">${questjson.optionC}</label>
 </h4>
 <h4>
 <label class="element-animation4 right">
-<input type="radio" name="${quest}+_answer" value="d">${questjson.optionD}</label>
+<input type="radio" name="${quest}_answer" value="d">${questjson.optionD}</label>
 </h4>
 </fieldset>
 <br/>
@@ -82,8 +82,7 @@ if (!isset($_SESSION["ans"])) {
                             });
                         </script>
                         <br/>
-                        <button type="submit" id="button1" name="submit" class="btn btn-primary btn-lg" value="next" style="align:center; position:absolute; left:47%;"
-                            onclick=timer()>SUBMIT</button>
+`                        <button type="submit" id="button1" name="submit" class="btn btn-primary btn-lg" value="next" style="align:center; position:absolute; left:47%;">SUBMIT</button>
                         <hr/>
                 </form>
                 </div>
