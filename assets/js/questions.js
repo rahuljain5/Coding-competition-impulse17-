@@ -1,4 +1,4 @@
-var questions = [
+var Questions = [
     {
         question: `What is the output of code given below?
     <pre>
