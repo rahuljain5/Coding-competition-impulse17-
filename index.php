@@ -2,11 +2,11 @@
 session_start();
 session_destroy();
 session_start();
+include('config.php');
 ?>
 <html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
 <body background="./assets/images/thestarkcoders.jpg" style="background-size:cover;">
     <div class="container-fluid bg-info">
         <div class="modal-dialog">
@@ -16,15 +16,16 @@ session_start();
                         <b>LOGIN</b>
                     </span>
                 </div>
-                <form style="position:absolute; left:80%; top:45%; text-align:center;" method="post" action="round1.php">
+                <form style="position:absolute; left:80%; top:45%; text-align:center;" method="post" action="./round1.php" id="loginForm">
                     <fieldset>
-                        <input type="text" placeholder="UserName Here!" name="name" autocomplete="off" required>
+                        <input type="text" placeholder="PlayerName Here!" name="name" autocomplete="off" required>
                         <br/>
                         <br/>
-                        <input type="password" id="pword" placeholder="Password Here!" autocomplete="off">
+                        <input type="password" id="pword" placeholder="Password Here!" autocomplete="off" oninput = "login()">
                         <br/>
+                        <span id="errormsg" style="color:red;"></span>
                         <br/>
-                        <button type="submit" style="display:inline-block; background:inherit; color:white;">GO</button>
+                        <!-- <button onclick="login()" style="display:inline-block; background:inherit; color:white;">GO</button> -->
                     </fieldset>
                 </form>
             </div>
@@ -40,3 +41,12 @@ session_start();
     </div>
     </div>
 </body>
+<script>
+  function login(){
+    var password = `<?php echo $player_password?>`;
+    if(document.getElementById('pword').value == password)
+      document.getElementById('loginForm').submit();
+    else
+      document.getElementById('errormsg').innerHTML = "Invalid Password";
+  }
+</script>
