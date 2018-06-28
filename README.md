@@ -34,6 +34,10 @@ MySQL Server
 
 >Change the questions, options and answer in the /assets/js/questions.js file.
 
+## Admin
+
+>To view all the teams and scores, run the adminres.php file.
+
 ## setting up
 
 - Extract/Clone in /var/www/html directory
