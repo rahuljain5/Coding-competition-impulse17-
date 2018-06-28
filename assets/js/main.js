@@ -1,3 +1,4 @@
+document.write(`<script src="./assets/js/questions.js"></script>`);
 var timeoutHandle;
 function count() {
     var startTime = document.getElementById('timer').innerHTML;
@@ -16,6 +17,7 @@ function count() {
         document.getElementById('timer').innerHTML = newtime;
         timeoutHandle = setTimeout(count, 1000);
     }
+    timer();
 }
 
 function timer() {
@@ -27,4 +29,15 @@ function timer() {
     time.setSeconds(00 - piece[2]);
     var t = time.toTimeString().split(" ")[0];
     document.getElementById('stam').value = t;
+}
+
+function calculateScore(answers){
+    var count=0,i=1;
+    Questions.forEach(question=>{
+        if(question.answer === answers[`q${i}_answer`])
+            count++;
+        i++;
+    })
+    console.log(count);
+    return count;
 }
